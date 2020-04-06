@@ -1,0 +1,16 @@
+Projeto SEFAZ (desafio)
+Data:06/04/2020
+Autor:Rurik N. Janiszewski
+
+banco: HSQLDB
+entidades: Usuario e Telefones
+Controladores: LoginBean e UserBean
+DAO: UsuarioDAO e UsuarioDAOImpl
+Utilidades: EntityManagerUtil
+Testes:TesteEEntityManagerUtil
+Paginas web: login, pesquisa e manterUsuario
+Acesso: usuario: admin e senha: admin
+
+Duvidas à disposição: Rurik N Janiszewski, tel:81971155557(whasApp) 
+e email: ruriknj@hotmail.com
+https://github.com/ruriknj/

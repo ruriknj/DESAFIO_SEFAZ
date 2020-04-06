@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:panelGrid style="width: 50%">
+			<p:row>
+
+				<p:commandButton value="Atualizar lista" update="@form"
+					actionListener="#{UsuarioBean.pesquisar}" />
+
+				<p:commandButton value="Criar usuário"
+					actionListener="#{UsuarioBean.abrirManterUsuario}" />
+			</p:row>
+		</p:panelGrid>
+		<p:panel header="Lista de Usuários"
+			style="margin-bottom:5px; width: 100%">
+			<p:dataTable var="usuario" value="#{UsuarioBean.listaUsuario}">
+				<p:column headerText="Nome">
+					<h:outputText value="#{usuario.nome}" />
+				</p:column>
+				<p:column headerText="E-mail">
+					<h:outputText value="#{usuario.email}" />
+				</p:column>
+				<p:column headerText="Editar" width="7%">
+					<p:commandButton icon="pi pi-pencil" action="#{UsuarioBean.editar}">
+						<f:setPropertyActionListener 
+							target="#{UsuarioBean.emailSelecionado}"
+							value="#{usuario.email}" />
+					</p:commandButton>
+				</p:column>
+				<p:column headerText="Remover" width="9%">
+					<p:commandButton icon="pi pi-times" update="@form"
+						action="#{UsuarioBean.remover}">
+						<f:setPropertyActionListener 
+							target="#{UsuarioBean.emailSelecionado}"
+							value="#{usuario.email}" />
+					</p:commandButton>
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
