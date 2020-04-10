@@ -4,4 +4,4 @@ D:\SEFAZ\ProjetoSefaz\src\main\java\dao\UsuarioDAOImpl.java
 D:\SEFAZ\ProjetoSefaz\src\main\java\dao\UsuarioDAO.java
 D:\SEFAZ\ProjetoSefaz\src\main\java\entidade\Usuario.java
 D:\SEFAZ\ProjetoSefaz\src\main\java\entidade\Telefone.java
-D:\SEFAZ\ProjetoSefaz\src\main\java\util\JpaUtil.java
+D:\SEFAZ\ProjetoSefaz\src\main\java\util\EntityManagerUtil.java

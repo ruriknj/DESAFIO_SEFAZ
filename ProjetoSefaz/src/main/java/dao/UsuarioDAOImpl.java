@@ -1,6 +1,7 @@
 package dao;
 
-import java.util.List;
+import java.util.List
+;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -23,7 +24,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 		EntityTransaction tx = ent.getTransaction();
 		tx.begin();
 
-		ent.merge(usuario);
+		ent.persist(usuario);
 		tx.commit();
 
 		return true;

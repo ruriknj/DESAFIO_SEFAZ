@@ -7,6 +7,7 @@ import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 import dao.UsuarioDAO;
@@ -14,7 +15,6 @@ import dao.UsuarioDAOImpl;
 import entidade.Telefone;
 import entidade.Usuario;
 import util.EntityManagerUtil;
-
 
 @ManagedBean(name = "UsuarioBean")
 @SessionScoped
@@ -29,7 +29,7 @@ public class UsuarioBean {
 
 	private static final String MANTER = "manterUsuario.xhtml";
 	private static final String PESQUISAR = "pesquisarUsuario.xhtml";
-	
+
 	public UsuarioBean() {
 
 		this.usuario = new Usuario();
@@ -46,7 +46,7 @@ public class UsuarioBean {
 	}
 
 	public void pesquisar() {
-	
+
 		this.listaUsuario = this.usuarioDAO.listarTodos();
 		System.out.println("Entrou PEsquisar ====");
 	}
@@ -56,51 +56,50 @@ public class UsuarioBean {
 		if (this.usuarioDAO.inserir(this.usuario)) {
 			FacesContext.getCurrentInstance().addMessage(null,
 					new FacesMessage(FacesMessage.SEVERITY_INFO, "", "Sucesso !!!"));
-			
+
 			abrirPerquisarUsuario();
-			
+
 		} else {
 			FacesContext.getCurrentInstance().addMessage(null,
 					new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "Erro ao inserir !!!"));
 		}
 
 	}
-	
+
 	public void adicionarTelefone() {
 
-		if(!this.existeTelefone(telefone)) {
-			
+		if (!this.existeTelefone(telefone)) {
+
 			Telefone telefoneNovo = new Telefone();
-			
+
 			telefoneNovo.setDdd(this.telefone.getDdd());
 			telefoneNovo.setNumero(this.telefone.getNumero());
 			telefoneNovo.setTipo(this.telefone.getTipo());
 			telefoneNovo.setUsuario(this.usuario);
-			
+
 			this.usuario.getTelefones().add(telefoneNovo);
-			
+
 			this.telefone = new Telefone();
 
-		}else {
+		} else {
 			FacesContext.getCurrentInstance().addMessage(null,
 					new FacesMessage(FacesMessage.SEVERITY_ERROR, "", "Telefone já existe !!!"));
 		}
-		
+
 	}
 
 	private boolean existeTelefone(Telefone telefone) {
 		boolean retorno = false;
-		
+
 		for (Telefone telLista : this.usuario.getTelefones()) {
-			if(telLista.getDdd() == telefone.getDdd() && 
-			   telLista.getNumero().equals(telefone.getNumero())) {
+			if (telLista.getDdd() == telefone.getDdd() && telLista.getNumero().equals(telefone.getNumero())) {
 				retorno = true;
 			}
 		}
-		
+
 		return retorno;
 	}
-	
+
 	public void abrirManterUsuario() throws IOException {
 		FacesContext.getCurrentInstance().getExternalContext().redirect(MANTER);
 	}
@@ -114,20 +113,21 @@ public class UsuarioBean {
 		this.usuario = usuarioEdicao;
 		abrirManterUsuario();
 	}
-	
+
 	public String remover() {
 		Usuario usuarioRemocao = this.usuarioDAO.pesquisar(emailSelecionado);
 		this.usuarioDAO.remover(usuarioRemocao);
 		this.listaUsuario = this.usuarioDAO.listarTodos();
 		return "";
 	}
+
 	public void limpar() {
 		this.listaUsuario = new ArrayList<Usuario>();
 		this.usuario = new Usuario();
 		this.usuario.setTelefones(new ArrayList<Telefone>());
 		this.telefone = new Telefone();
 	}
-	
+
 	public Usuario getUsuario() {
 		return usuario;
 	}

@@ -1,13 +1,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:p="http://primefaces.org/ui">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+		<title>Drogaria</title>
+</h:head>
+<h:body>
+
+
+   
      
-    <h:head>
+<h:form> 
+
+	 <h:head>
+        <title>#{dialogBean.title}</title>
+        <style type="text/css">
+            .ui-widget {
+                font-size: 90%;
+            }
+        </style>
     </h:head>
+     
+    
+    
+
+<p:layout style="min-width:400px;min-height:200px;">
+    <p:layoutUnit position="west" resizable="true" size="100" minSize="40" maxSize="200">
+        West
+    </p:layoutUnit>
  
-    <h:body>
-    Projeto Sefaz
-        <p:spinner />
+    <p:layoutUnit position="center">
+        Center
+        <h:body>
+      <h:form>
+    	<h:panelGrid columns="4">
+    	<h:outputText value="#{dialogBean.messageText}"/>
+    	<p:commandButton value="Fechar" onclick="closeDialog();" immediate="true" icon="ui-icon-close" style="margin-right:20px;" styleClass="ui-priority-primary"/>
+    	<p:commandButton value="Voltar" id="ajax" update="@form" action="#{UsuarioBean.fecharSessao}" style="margin-left:20px;" styleClass="ui-priority-primary" />
+    	</h:panelGrid>
+     </h:form>
     </h:body>
+    
+    <SCRIPT type="text/javascript">
+    function closeDialog(){
+      window.close();
+	}
+    </SCRIPT>
+     
+        
+    </p:layoutUnit>
+</p:layout>
+
+</h:form>
+</h:body>
 </html>

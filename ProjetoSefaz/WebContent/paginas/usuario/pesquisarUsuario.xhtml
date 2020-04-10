@@ -18,6 +18,13 @@
 
 				<p:commandButton value="Criar usuário"
 					actionListener="#{UsuarioBean.abrirManterUsuario}" />
+				
+					<p:commandButton value="Fechar" onclick="closeDialog();" 
+					immediate="true" icon="ui-icon-close" />
+					<SCRIPT type="text/javascript">
+   					 function closeDialog(){window.close();}
+    				</SCRIPT>
+				
 			</p:row>
 		</p:panelGrid>
 		<p:panel header="Lista de Usuários"
@@ -43,7 +50,7 @@
 							target="#{UsuarioBean.emailSelecionado}"
 							value="#{usuario.email}" />
 					</p:commandButton>
-				</p:column>
+					</p:column>
 			</p:dataTable>
 		</p:panel>
 	</h:form>

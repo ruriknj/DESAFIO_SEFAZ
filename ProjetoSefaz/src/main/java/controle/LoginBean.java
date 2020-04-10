@@ -1,6 +1,7 @@
 package controle;
 
 import java.io.IOException;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
@@ -105,4 +106,6 @@ public class LoginBean {
 	public void setMensagem(String mensagem) {
 		this.mensagem = mensagem;
 	}
+	
+	
 }

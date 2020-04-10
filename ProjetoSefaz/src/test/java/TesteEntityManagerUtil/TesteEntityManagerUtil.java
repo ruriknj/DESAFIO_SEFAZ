@@ -1,5 +1,6 @@
 package TesteEntityManagerUtil;
-import org.junit.Test;
+import org.junit.Test
+;
 import util.EntityManagerUtil;
 
 /* Este teste faz conexão testando o driver do banco HSQLDB

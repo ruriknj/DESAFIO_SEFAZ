@@ -26,6 +26,9 @@ public class Telefone {
 	@Column(name = "tipo")
 	private String tipo;
 
+	// @Column
+	// private String id_email;
+
 	@ManyToOne
 	@JoinColumn(name = "id_email", referencedColumnName = "email", nullable = false)
 	private Usuario usuario;
@@ -69,4 +72,11 @@ public class Telefone {
 	public void setId(long id) {
 		this.id = id;
 	}
+
+	@Override
+	public String toString() {
+		return "(" + ddd + ")" + numero + " (" + tipo + ")";
+
+	}
+
 }
