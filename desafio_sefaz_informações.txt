@@ -7,7 +7,7 @@ entidades: Usuario e Telefones
 Controladores: LoginBean e UserBean
 DAO: UsuarioDAO e UsuarioDAOImpl
 Utilidades: EntityManagerUtil
-Testes:TesteEEntityManagerUtil
+Testes:TesteEEntityManagerUtil e testeUsuario
 Paginas web: login, pesquisa e manterUsuario
 Acesso: usuario: admin e senha: admin
 
