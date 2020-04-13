@@ -13,7 +13,7 @@
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
 
-			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:D:/banco/sefaz1"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:D:/banco/sefaz1;hsqldb.lock_file=false"/>
 
 			<property name="javax.persistence.jdbc.user" value="sa"/>
 

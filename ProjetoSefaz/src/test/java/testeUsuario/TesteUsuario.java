@@ -5,6 +5,8 @@ import dao.UsuarioDAOImpl;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+
 import entidade.Telefone;
 import entidade.Usuario;
 import util.EntityManagerUtil;
@@ -44,15 +46,16 @@ public class TesteUsuario {
 		user.setEmail("ruriknj@com");
 
 		usuarioDAO.inserir(user);
-		
+
 		System.out.println("Lista de usuários: " + listaUsuario);
 	}
-	
+
 	public static void pesquisarTest() {
 
 		listaUsuario = usuarioDAO.listarTodos();
 		System.out.println("Entrou PEsquisar ====");
 		System.out.println(listaUsuario);
+
 	}
 
 	public static void removerTest() {
@@ -63,7 +66,7 @@ public class TesteUsuario {
 		listaUsuario = usuarioDAO.listarTodos();
 		System.out.println("Lista de usuários: " + listaUsuario);
 		System.out.println(listaUsuario);
-		
+
 	}
 
 	public static void alterarTest() {
@@ -83,7 +86,7 @@ public class TesteUsuario {
 		user.setEmail("rurikn123j@com");
 
 		usuarioDAO.alterar(user);
-		
+
 		System.out.println(listaUsuario);
 	}
 
