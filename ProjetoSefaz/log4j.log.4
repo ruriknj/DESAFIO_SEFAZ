@@ -1,0 +1,626 @@
+[2020-04-24 09:33:37,047]DEBUG  4211[main] - org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:93) - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[2020-04-24 09:33:37,054]DEBUG  4218[main] - org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:93) - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[2020-04-24 09:33:37,063]DEBUG  4227[main] - org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:93) - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[2020-04-24 09:33:37,072]DEBUG  4236[main] - org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.register(DefaultIdentifierGeneratorFactory.java:93) - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[2020-04-24 09:33:37,130]DEBUG  4294[main] - org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1841) - Preparing to build session factory with filters : {}
+[2020-04-24 09:33:37,186] INFO  4350[main] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:93) - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[2020-04-24 09:33:37,857] INFO  5021[main] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:166) - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:D:/banco/sefaz1;hsqldb.lock_file=false;shutdown = true; hsqldb.write_delay = false;]
+[2020-04-24 09:33:37,860] INFO  5024[main] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:172) - HHH000046: Connection properties: {user=sa}
+[2020-04-24 09:33:37,862] INFO  5026[main] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:180) - HHH000006: Autocommit mode: false
+[2020-04-24 09:33:37,871] INFO  5035[main] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:102) - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2020-04-24 09:33:37,873]DEBUG  5037[main] - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:104) - Initializing Connection pool with 1 Connections
+[2020-04-24 09:33:39,733] INFO  6897[main] - org.hsqldb.persist.Logger.logInfoEvent(?:?) - checkpointClose start
+[2020-04-24 09:33:39,734] INFO  6898[main] - org.hsqldb.persist.Logger.logInfoEvent(?:?) - checkpointClose synched
+[2020-04-24 09:33:39,823] INFO  6987[main] - org.hsqldb.persist.Logger.logInfoEvent(?:?) - checkpointClose script done
+[2020-04-24 09:33:39,953] INFO  7117[main] - org.hsqldb.persist.Logger.logInfoEvent(?:?) - checkpointClose end
+[2020-04-24 09:33:40,121]DEBUG  7285[main] - org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:128) - Database ->
+       name : HSQL Database Engine
+    version : 2.5.0
+      major : 2
+      minor : 5
+[2020-04-24 09:33:40,166]DEBUG  7330[main] - org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:139) - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.5.0
+      major : 2
+      minor : 5
+[2020-04-24 09:33:40,169]DEBUG  7333[main] - org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:150) - JDBC version : 4.2
+[2020-04-24 09:33:40,181]DEBUG  7345[main] - org.hibernate.engine.jdbc.cursor.internal.StandardRefCursorSupport.supportsRefCursors(StandardRefCursorSupport.java:187) - Unexpected error trying to gauge level of JDBC REF_CURSOR support : null
+[2020-04-24 09:33:40,286] INFO  7450[main] - org.hibernate.dialect.Dialect.<init>(Dialect.java:145) - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[2020-04-24 09:33:40,608]DEBUG  7772[main] - org.hibernate.cfg.Configuration$MetadataSourceQueue.processHbmXmlQueue(Configuration.java:3722) - Processing hbm.xml files
+[2020-04-24 09:33:40,609]DEBUG  7773[main] - org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3752) - Process annotated classes
+[2020-04-24 09:33:40,633]DEBUG  7797[main] - org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:598) - Binding entity from annotated class: entidade.Usuario
+[2020-04-24 09:33:41,173]DEBUG  8337[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2020-04-24 09:33:41,179]DEBUG  8343[main] - org.hibernate.cfg.AnnotationBinder.determineSharedCacheMode(AnnotationBinder.java:1056) - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+[2020-04-24 09:33:41,207]DEBUG  8371[main] - org.hibernate.cfg.annotations.EntityBinder.bindEntity(EntityBinder.java:397) - Import with entity name Usuario
+[2020-04-24 09:33:41,228]DEBUG  8392[main] - org.hibernate.cfg.annotations.EntityBinder.bindTable(EntityBinder.java:586) - Bind entity entidade.Usuario on table USUARIO
+[2020-04-24 09:33:41,395]DEBUG  8559[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USUARIO), mappingColumn=email, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,423]DEBUG  8587[main] - org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185) - MetadataSourceProcessor property email with lazy=false
+[2020-04-24 09:33:41,435]DEBUG  8599[main] - org.hibernate.cfg.AbstractPropertyHolder.resolveAttributeConverterDefinition(AbstractPropertyHolder.java:106) - Attempting to locate auto-apply AttributeConverter for property [entidade.Usuario:email]
+[2020-04-24 09:33:41,439]DEBUG  8603[main] - org.hibernate.cfg.annotations.SimpleValueBinder.make(SimpleValueBinder.java:385) - building SimpleValue for email
+[2020-04-24 09:33:41,456]DEBUG  8620[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property email
+[2020-04-24 09:33:41,487]DEBUG  8651[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USUARIO), mappingColumn=nome, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,493]DEBUG  8657[main] - org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185) - MetadataSourceProcessor property nome with lazy=false
+[2020-04-24 09:33:41,494]DEBUG  8658[main] - org.hibernate.cfg.AbstractPropertyHolder.resolveAttributeConverterDefinition(AbstractPropertyHolder.java:106) - Attempting to locate auto-apply AttributeConverter for property [entidade.Usuario:nome]
+[2020-04-24 09:33:41,496]DEBUG  8660[main] - org.hibernate.cfg.annotations.SimpleValueBinder.make(SimpleValueBinder.java:385) - building SimpleValue for nome
+[2020-04-24 09:33:41,497]DEBUG  8661[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property nome
+[2020-04-24 09:33:41,500]DEBUG  8664[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USUARIO), mappingColumn=senha, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,502]DEBUG  8666[main] - org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185) - MetadataSourceProcessor property senha with lazy=false
+[2020-04-24 09:33:41,504]DEBUG  8668[main] - org.hibernate.cfg.AbstractPropertyHolder.resolveAttributeConverterDefinition(AbstractPropertyHolder.java:106) - Attempting to locate auto-apply AttributeConverter for property [entidade.Usuario:senha]
+[2020-04-24 09:33:41,506]DEBUG  8670[main] - org.hibernate.cfg.annotations.SimpleValueBinder.make(SimpleValueBinder.java:385) - building SimpleValue for senha
+[2020-04-24 09:33:41,509]DEBUG  8673[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property senha
+[2020-04-24 09:33:41,518]DEBUG  8682[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='usuario'}
+[2020-04-24 09:33:41,520]DEBUG  8684[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USUARIO), mappingColumn=telefones, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,529]DEBUG  8693[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USUARIO), mappingColumn=null, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,587]DEBUG  8751[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USUARIO), mappingColumn=element, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,592]DEBUG  8756[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(USUARIO), mappingColumn=telefones_KEY, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,596]DEBUG  8760[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3JoinColumn{logicalColumnName='telefones_KEY', referencedColumn='null', mappedBy='null'}
+[2020-04-24 09:33:41,603]DEBUG  8767[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='usuario'}
+[2020-04-24 09:33:41,615]DEBUG  8779[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='usuario'}
+[2020-04-24 09:33:41,628]DEBUG  8792[main] - org.hibernate.cfg.annotations.CollectionBinder.bind(CollectionBinder.java:399) - Collection role: entidade.Usuario.telefones
+[2020-04-24 09:33:41,685]DEBUG  8849[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property telefones
+[2020-04-24 09:33:41,702]DEBUG  8866[main] - org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:598) - Binding entity from annotated class: entidade.Telefone
+[2020-04-24 09:33:41,704]DEBUG  8868[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[2020-04-24 09:33:41,707]DEBUG  8871[main] - org.hibernate.cfg.AnnotationBinder.determineSharedCacheMode(AnnotationBinder.java:1056) - No value specified for 'javax.persistence.sharedCache.mode'; using UNSPECIFIED
+[2020-04-24 09:33:41,709]DEBUG  8873[main] - org.hibernate.cfg.annotations.EntityBinder.bindEntity(EntityBinder.java:397) - Import with entity name Telefone
+[2020-04-24 09:33:41,711]DEBUG  8875[main] - org.hibernate.cfg.annotations.EntityBinder.bindTable(EntityBinder.java:586) - Bind entity entidade.Telefone on table TELEFONE
+[2020-04-24 09:33:41,840]DEBUG  9004[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TELEFONE), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,846]DEBUG  9010[main] - org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185) - MetadataSourceProcessor property id with lazy=false
+[2020-04-24 09:33:41,848]DEBUG  9012[main] - org.hibernate.cfg.AbstractPropertyHolder.resolveAttributeConverterDefinition(AbstractPropertyHolder.java:106) - Attempting to locate auto-apply AttributeConverter for property [entidade.Telefone:id]
+[2020-04-24 09:33:41,850]DEBUG  9014[main] - org.hibernate.cfg.annotations.SimpleValueBinder.make(SimpleValueBinder.java:385) - building SimpleValue for id
+[2020-04-24 09:33:41,852]DEBUG  9016[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property id
+[2020-04-24 09:33:41,857]DEBUG  9021[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TELEFONE), mappingColumn=ddd, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,859]DEBUG  9023[main] - org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185) - MetadataSourceProcessor property ddd with lazy=false
+[2020-04-24 09:33:41,862]DEBUG  9026[main] - org.hibernate.cfg.AbstractPropertyHolder.resolveAttributeConverterDefinition(AbstractPropertyHolder.java:106) - Attempting to locate auto-apply AttributeConverter for property [entidade.Telefone:ddd]
+[2020-04-24 09:33:41,865]DEBUG  9029[main] - org.hibernate.cfg.annotations.SimpleValueBinder.make(SimpleValueBinder.java:385) - building SimpleValue for ddd
+[2020-04-24 09:33:41,867]DEBUG  9031[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property ddd
+[2020-04-24 09:33:41,878]DEBUG  9042[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TELEFONE), mappingColumn=numero, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,880]DEBUG  9044[main] - org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185) - MetadataSourceProcessor property numero with lazy=false
+[2020-04-24 09:33:41,882]DEBUG  9046[main] - org.hibernate.cfg.AbstractPropertyHolder.resolveAttributeConverterDefinition(AbstractPropertyHolder.java:106) - Attempting to locate auto-apply AttributeConverter for property [entidade.Telefone:numero]
+[2020-04-24 09:33:41,885]DEBUG  9049[main] - org.hibernate.cfg.annotations.SimpleValueBinder.make(SimpleValueBinder.java:385) - building SimpleValue for numero
+[2020-04-24 09:33:41,887]DEBUG  9051[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property numero
+[2020-04-24 09:33:41,894]DEBUG  9058[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TELEFONE), mappingColumn=tipo, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,897]DEBUG  9061[main] - org.hibernate.cfg.annotations.PropertyBinder.makePropertyAndValue(PropertyBinder.java:185) - MetadataSourceProcessor property tipo with lazy=false
+[2020-04-24 09:33:41,899]DEBUG  9063[main] - org.hibernate.cfg.AbstractPropertyHolder.resolveAttributeConverterDefinition(AbstractPropertyHolder.java:106) - Attempting to locate auto-apply AttributeConverter for property [entidade.Telefone:tipo]
+[2020-04-24 09:33:41,903]DEBUG  9067[main] - org.hibernate.cfg.annotations.SimpleValueBinder.make(SimpleValueBinder.java:385) - building SimpleValue for tipo
+[2020-04-24 09:33:41,904]DEBUG  9068[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property tipo
+[2020-04-24 09:33:41,907]DEBUG  9071[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3JoinColumn{logicalColumnName='id_email', referencedColumn='email', mappedBy=''}
+[2020-04-24 09:33:41,908]DEBUG  9072[main] - org.hibernate.cfg.Ejb3Column.bind(Ejb3Column.java:239) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(TELEFONE), mappingColumn=usuario, insertable=true, updatable=true, unique=false}
+[2020-04-24 09:33:41,923]DEBUG  9087[main] - org.hibernate.cfg.annotations.PropertyBinder.makeProperty(PropertyBinder.java:271) - Building property usuario
+[2020-04-24 09:33:41,945]DEBUG  9109[main] - org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:422) - Starting fillSimpleValue for email
+[2020-04-24 09:33:41,947]DEBUG  9111[main] - org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:422) - Starting fillSimpleValue for nome
+[2020-04-24 09:33:41,949]DEBUG  9113[main] - org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:422) - Starting fillSimpleValue for senha
+[2020-04-24 09:33:41,950]DEBUG  9114[main] - org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:422) - Starting fillSimpleValue for id
+[2020-04-24 09:33:41,951]DEBUG  9115[main] - org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:422) - Starting fillSimpleValue for ddd
+[2020-04-24 09:33:41,951]DEBUG  9115[main] - org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:422) - Starting fillSimpleValue for numero
+[2020-04-24 09:33:41,952]DEBUG  9116[main] - org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:422) - Starting fillSimpleValue for tipo
+[2020-04-24 09:33:41,961]DEBUG  9125[main] - org.hibernate.cfg.Configuration.processFkSecondPassInOrder(Configuration.java:1482) - Processing fk mappings (*ToOne and JoinedSubclass)
+[2020-04-24 09:33:42,019]DEBUG  9183[main] - org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1687) - Processing extends queue
+[2020-04-24 09:33:42,020]DEBUG  9184[main] - org.hibernate.cfg.Configuration.processExtendsQueue(Configuration.java:1745) - Processing extends queue
+[2020-04-24 09:33:42,023]DEBUG  9187[main] - org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1690) - Processing collection mappings
+[2020-04-24 09:33:42,026]DEBUG  9190[main] - org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:67) - Second pass for collection: entidade.Usuario.telefones
+[2020-04-24 09:33:42,032]DEBUG  9196[main] - org.hibernate.cfg.annotations.CollectionBinder.bindOneToManySecondPass(CollectionBinder.java:822) - Binding a OneToMany: entidade.Usuario.telefones through a foreign key
+[2020-04-24 09:33:42,040]DEBUG  9204[main] - org.hibernate.cfg.annotations.CollectionBinder.bindOneToManySecondPass(CollectionBinder.java:863) - Mapping collection: entidade.Usuario.telefones -> TELEFONE
+[2020-04-24 09:33:42,048]DEBUG  9212[main] - org.hibernate.cfg.annotations.TableBinder.bindFk(TableBinder.java:362) - Retrieving property entidade.Telefone.usuario
+[2020-04-24 09:33:42,051]DEBUG  9215[main] - org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:84) - Mapped collection key: id_email, one-to-many: entidade.Telefone
+[2020-04-24 09:33:42,053]DEBUG  9217[main] - org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1700) - Processing native query and ResultSetMapping mappings
+[2020-04-24 09:33:42,054]DEBUG  9218[main] - org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1708) - Processing association property references
+[2020-04-24 09:33:42,056]DEBUG  9220[main] - org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1730) - Creating tables' unique integer identifiers
+[2020-04-24 09:33:42,057]DEBUG  9221[main] - org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1731) - Processing foreign key constraints
+[2020-04-24 09:33:42,058]DEBUG  9222[main] - org.hibernate.cfg.Configuration.secondPassCompileForeignKeys(Configuration.java:1802) - Resolving reference to class: entidade.Usuario
+[2020-04-24 09:33:42,073]DEBUG  9237[main] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:59) - No JtaPlatform was specified, checking resolver
+[2020-04-24 09:33:42,079]DEBUG  9243[main] - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformResolverInitiator.initiateService(JtaPlatformResolverInitiator.java:50) - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[2020-04-24 09:33:42,100]DEBUG  9264[main] - org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver.resolveJtaPlatform(StandardJtaPlatformResolver.java:118) - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2020-04-24 09:33:42,125]DEBUG  9289[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:122) - Automatic flush during beforeCompletion(): disabled
+[2020-04-24 09:33:42,127]DEBUG  9291[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:128) - Automatic session close at end of transaction: disabled
+[2020-04-24 09:33:42,128]DEBUG  9292[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:139) - JDBC batch size: 15
+[2020-04-24 09:33:42,129]DEBUG  9293[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:145) - JDBC batch updates for versioned data: disabled
+[2020-04-24 09:33:42,130]DEBUG  9294[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:155) - Scrollable result sets: enabled
+[2020-04-24 09:33:42,131]DEBUG  9295[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:161) - Wrap result sets: disabled
+[2020-04-24 09:33:42,132]DEBUG  9296[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:167) - JDBC3 getGeneratedKeys(): enabled
+[2020-04-24 09:33:42,133]DEBUG  9297[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:179) - multi-tenancy strategy : NONE
+[2020-04-24 09:33:42,134]DEBUG  9298[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:185) - Connection release mode: auto
+[2020-04-24 09:33:42,159]DEBUG  9323[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:207) - Using BatchFetchStyle : LEGACY
+[2020-04-24 09:33:42,161]DEBUG  9325[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:232) - Default batch fetch size: 1
+[2020-04-24 09:33:42,163]DEBUG  9327[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:238) - Generate SQL with comments: disabled
+[2020-04-24 09:33:42,166]DEBUG  9330[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:244) - Order SQL updates by primary key: disabled
+[2020-04-24 09:33:42,168]DEBUG  9332[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:250) - Order SQL inserts for batching: disabled
+[2020-04-24 09:33:42,170]DEBUG  9334[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:258) - Default null ordering: none
+[2020-04-24 09:33:42,177]DEBUG  9341[main] - org.hibernate.cfg.SettingsFactory.createQueryTranslatorFactory(SettingsFactory.java:501) - Query translator: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory
+[2020-04-24 09:33:42,192] INFO  9356[main] - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init>(ASTQueryTranslatorFactory.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+[2020-04-24 09:33:42,194]DEBUG  9358[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:268) - Query language substitutions: {}
+[2020-04-24 09:33:42,195]DEBUG  9359[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:274) - JPA-QL strict compliance: disabled
+[2020-04-24 09:33:42,196]DEBUG  9360[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:282) - Second-level cache: enabled
+[2020-04-24 09:33:42,199]DEBUG  9363[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:288) - Query cache: disabled
+[2020-04-24 09:33:42,210]DEBUG  9374[main] - org.hibernate.cache.internal.RegionFactoryInitiator.initiateService(RegionFactoryInitiator.java:105) - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[2020-04-24 09:33:42,231]DEBUG  9395[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:301) - Optimize cache for minimal puts: disabled
+[2020-04-24 09:33:42,233]DEBUG  9397[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:316) - Structured second-level cache entries: disabled
+[2020-04-24 09:33:42,235]DEBUG  9399[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:326) - Second-level cache direct-reference entries: disabled
+[2020-04-24 09:33:42,240]DEBUG  9404[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:332) - Automatic eviction of collection cache: disabled
+[2020-04-24 09:33:42,257]DEBUG  9421[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:340) - Statistics: disabled
+[2020-04-24 09:33:42,260]DEBUG  9424[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:346) - Deleted entity synthetic identifier rollback: disabled
+[2020-04-24 09:33:42,262]DEBUG  9426[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:373) - Default entity-mode: pojo
+[2020-04-24 09:33:42,263]DEBUG  9427[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:379) - Named query checking : enabled
+[2020-04-24 09:33:42,265]DEBUG  9429[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:385) - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[2020-04-24 09:33:42,266]DEBUG  9430[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:403) - Allow initialization of lazy state outside session : : disabled
+[2020-04-24 09:33:42,267]DEBUG  9431[main] - org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:413) - JTA Track by Thread: enabled
+[2020-04-24 09:33:42,629]DEBUG  9793[main] - org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:227) - Building session factory
+[2020-04-24 09:33:42,740]DEBUG  9904[main] - org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:283) - Session factory constructed with filter configurations : {}
+[2020-04-24 09:33:42,743]DEBUG  9907[main] - org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:284) - Instantiating session factory with properties: {java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_241\jre\bin, java.vm.version=25.241-b07, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, HibernatePersistenceProvider.format_sql=true, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.script=, user.country=BR, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=D:\SEFAZ\ProjetoSefaz, java.runtime.version=1.8.0_241-b07, javax.persistence.jdbc.user=sa, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_241\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\filipe\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, javax.persistence.jdbc.password=, user.variant=, os.name=Windows 10, sun.jnu.encoding=Cp1252, javax.persistence.jdbc.url=jdbc:hsqldb:file:D:/banco/sefaz1;hsqldb.lock_file=false;shutdown = true; hsqldb.write_delay = false;, java.library.path=C:\Program Files\Java\jdk1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_241/bin/server;C:/Program Files/Java/jre1.8.0_241/bin;C:/Program Files/Java/jre1.8.0_241/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_241\bin;D:\Program Files\Git\Git\cmd;C:\hsqldb-2.5.0\hsqldb\lib\hsqldb.jar;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\filipe\AppData\Local\Microsoft\WindowsApps;;D:\JAVA\Binarios\eclipse-java-2019-06-R-win32-x86_64\eclipse;;., javax.persistence.jdbc.driver=org.hsqldb.jdbcDriver, hibernate.ejb.persistenceUnitName=sefaz, java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, HibernatePersistenceProvider.dialect=org.hibernate.dialect.HSQLDialect, os.version=10.0, user.home=C:\Users\filipe, user.timezone=America/Sao_Paulo, java.awt.printerjob=sun.awt.windows.WPrinterJob, java.specification.version=1.8, file.encoding=Cp1252, user.name=ruriknj, java.class.path=D:\SEFAZ\ProjetoSefaz\target\test-classes;D:\SEFAZ\ProjetoSefaz\target\classes;D:\JAVA\Binarios\eclipse-java-2019-06-R-win32-x86_64\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar;D:\JAVA\Binarios\eclipse-java-2019-06-R-win32-x86_64\eclipse\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;D:\JAVA\log4j-1.2.17\apache-log4j-1.2.17\log4j-1.2.17.jar;C:\Users\filipe\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\filipe\.m2\repository\com\sun\faces\jsf-api\2.2.13\jsf-api-2.2.13.jar;C:\Users\filipe\.m2\repository\com\sun\faces\jsf-impl\2.2.13\jsf-impl-2.2.13.jar;C:\Users\filipe\.m2\repository\org\primefaces\primefaces\7.0\primefaces-7.0.jar;C:\Users\filipe\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.0.Final\hibernate-entitymanager-4.3.0.Final.jar;C:\Users\filipe\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\filipe\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\filipe\.m2\repository\org\hibernate\hibernate-core\4.3.0.Final\hibernate-core-4.3.0.Final.jar;C:\Users\filipe\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\filipe\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\filipe\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\filipe\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar;C:\Users\filipe\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.4.Final\hibernate-commons-annotations-4.0.4.Final.jar;C:\Users\filipe\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\filipe\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\filipe\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;C:\Users\filipe\.m2\repository\com\oracle\ojdbc6\11.2.0\ojdbc6-11.2.0.jar;C:\Users\filipe\.m2\repository\org\hsqldb\hsqldb\2.5.0\hsqldb-2.5.0.jar, hibernate.bytecode.use_reflection_optimizer=false, HibernatePersistenceProvider.show_sql=true, java.vm.specification.version=1.8, sun.arch.data.model=64, java.home=C:\Program Files\Java\jdk1.8.0_241\jre, sun.java.command=testeUsuario.TesteUsuario, java.specification.vendor=Oracle Corporation, user.language=pt, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_241, java.ext.dirs=C:\Program Files\Java\jdk1.8.0_241\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_241\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_241\jre\classes, java.vendor=Oracle Corporation, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.cpu.endian=little, sun.io.unicode.encoding=UnicodeLittle, sun.desktop=windows, sun.cpu.isalist=amd64}
+[2020-04-24 09:33:42,813]DEBUG  9977[main] - org.hibernate.secure.spi.JaccIntegrator.doIntegration(JaccIntegrator.java:90) - Skipping JACC integration as it was not enabled
+[2020-04-24 09:33:42,864]DEBUG 10028[main] - org.hibernate.engine.spi.CascadeStyles.registerCascadeStyle(CascadeStyles.java:285) - External cascade style regsitration [persist : STYLE_PERSIST_SKIPLAZY] overrode base registration [STYLE_PERSIST]
+[2020-04-24 09:33:43,318]DEBUG 10482[main] - org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.setDialect(DefaultIdentifierGeneratorFactory.java:107) - Setting dialect [org.hibernate.dialect.HSQLDialect]
+[2020-04-24 09:33:43,321]DEBUG 10485[main] - org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.setDialect(DefaultIdentifierGeneratorFactory.java:107) - Setting dialect [org.hibernate.dialect.HSQLDialect]
+[2020-04-24 09:33:43,877]DEBUG 11041[main] - org.hibernate.persister.collection.AbstractCollectionPersister.logStaticSQL(AbstractCollectionPersister.java:683) - Static SQL for collection: entidade.Usuario.telefones
+[2020-04-24 09:33:43,881]DEBUG 11045[main] - org.hibernate.persister.collection.AbstractCollectionPersister.logStaticSQL(AbstractCollectionPersister.java:684) -  Row insert: update TELEFONE set id_email=? where id=?
+[2020-04-24 09:33:43,883]DEBUG 11047[main] - org.hibernate.persister.collection.AbstractCollectionPersister.logStaticSQL(AbstractCollectionPersister.java:685) -  Row update: update TELEFONE set  where id=?
+[2020-04-24 09:33:43,885]DEBUG 11049[main] - org.hibernate.persister.collection.AbstractCollectionPersister.logStaticSQL(AbstractCollectionPersister.java:686) -  Row delete: update TELEFONE set id_email=null where id_email=? and id=?
+[2020-04-24 09:33:43,888]DEBUG 11052[main] - org.hibernate.persister.collection.AbstractCollectionPersister.logStaticSQL(AbstractCollectionPersister.java:687) -  One-shot delete: update TELEFONE set id_email=null where id_email=?
+[2020-04-24 09:33:43,918]DEBUG 11082[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3670) - Static SQL for entity: entidade.Usuario
+[2020-04-24 09:33:43,919]DEBUG 11083[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3675) -  Version select: select email from USUARIO where email =?
+[2020-04-24 09:33:43,920]DEBUG 11084[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3678) -  Snapshot select: select usuario_.email, usuario_.nome as nome2_1_, usuario_.senha as senha3_1_ from USUARIO usuario_ where usuario_.email=?
+[2020-04-24 09:33:43,921]DEBUG 11085[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3681) -  Insert 0: insert into USUARIO (nome, senha, email) values (?, ?, ?)
+[2020-04-24 09:33:43,923]DEBUG 11087[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3682) -  Update 0: update USUARIO set nome=?, senha=? where email=?
+[2020-04-24 09:33:43,925]DEBUG 11089[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3683) -  Delete 0: delete from USUARIO where email=?
+[2020-04-24 09:33:44,146]DEBUG 11310[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@22875539]
+[2020-04-24 09:33:44,153]DEBUG 11317[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,155]DEBUG 11319[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,155]DEBUG 11319[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,181]DEBUG 11345[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,315]DEBUG 11479[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,345]DEBUG 11509[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,357]DEBUG 11521[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [NONE]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=?
+[2020-04-24 09:33:44,358]DEBUG 11522[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@758705fa]
+[2020-04-24 09:33:44,359]DEBUG 11523[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,360]DEBUG 11524[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,361]DEBUG 11525[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,362]DEBUG 11526[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,363]DEBUG 11527[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,366]DEBUG 11530[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,374]DEBUG 11538[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [READ]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=?
+[2020-04-24 09:33:44,376]DEBUG 11540[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@906d29b]
+[2020-04-24 09:33:44,378]DEBUG 11542[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,379]DEBUG 11543[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,380]DEBUG 11544[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,381]DEBUG 11545[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,383]DEBUG 11547[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,387]DEBUG 11551[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,389]DEBUG 11553[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [UPGRADE]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=? for update
+[2020-04-24 09:33:44,390]DEBUG 11554[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@436bc36]
+[2020-04-24 09:33:44,392]DEBUG 11556[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,393]DEBUG 11557[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,395]DEBUG 11559[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,396]DEBUG 11560[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,398]DEBUG 11562[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,402]DEBUG 11566[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,404]DEBUG 11568[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [UPGRADE_NOWAIT]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=? for update
+[2020-04-24 09:33:44,405]DEBUG 11569[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@604c5de8]
+[2020-04-24 09:33:44,406]DEBUG 11570[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,407]DEBUG 11571[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,408]DEBUG 11572[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,409]DEBUG 11573[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,411]DEBUG 11575[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,413]DEBUG 11577[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,414]DEBUG 11578[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [UPGRADE_SKIPLOCKED]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=? for update
+[2020-04-24 09:33:44,415]DEBUG 11579[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@66fdec9]
+[2020-04-24 09:33:44,417]DEBUG 11581[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,419]DEBUG 11583[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,421]DEBUG 11585[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,423]DEBUG 11587[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,425]DEBUG 11589[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,429]DEBUG 11593[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,431]DEBUG 11595[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [FORCE]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=? for update
+[2020-04-24 09:33:44,433]DEBUG 11597[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@550a1967]
+[2020-04-24 09:33:44,440]DEBUG 11604[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,443]DEBUG 11607[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,445]DEBUG 11609[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,447]DEBUG 11611[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,448]DEBUG 11612[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,462]DEBUG 11626[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,464]DEBUG 11628[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [PESSIMISTIC_READ]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=? for update
+[2020-04-24 09:33:44,466]DEBUG 11630[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@52851b44]
+[2020-04-24 09:33:44,470]DEBUG 11634[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,471]DEBUG 11635[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,472]DEBUG 11636[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,476]DEBUG 11640[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,478]DEBUG 11642[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,482]DEBUG 11646[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,483]DEBUG 11647[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [PESSIMISTIC_WRITE]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=? for update
+[2020-04-24 09:33:44,486]DEBUG 11650[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5d8bafa9]
+[2020-04-24 09:33:44,489]DEBUG 11653[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,490]DEBUG 11654[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,491]DEBUG 11655[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,492]DEBUG 11656[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,494]DEBUG 11658[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,497]DEBUG 11661[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,498]DEBUG 11662[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [PESSIMISTIC_FORCE_INCREMENT]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=? for update
+[2020-04-24 09:33:44,499]DEBUG 11663[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2dca0d64]
+[2020-04-24 09:33:44,500]DEBUG 11664[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,504]DEBUG 11668[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,506]DEBUG 11670[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,509]DEBUG 11673[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,511]DEBUG 11675[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,515]DEBUG 11679[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,517]DEBUG 11681[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [OPTIMISTIC]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=?
+[2020-04-24 09:33:44,523]DEBUG 11687[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@ff684e1]
+[2020-04-24 09:33:44,579]DEBUG 11743[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : nome
+[2020-04-24 09:33:44,642]DEBUG 11806[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : senha
+[2020-04-24 09:33:44,644]DEBUG 11808[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : telefones
+[2020-04-24 09:33:44,646]DEBUG 11810[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,648]DEBUG 11812[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,654]DEBUG 11818[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Usuario)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Usuario, querySpaceUid=<gen:0>, path=entidade.Usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Usuario)
+          - SQL table alias mapping - usuario0_
+          - alias suffix - 0_
+          - suffixed key columns - {email1_1_0_}
+
+[2020-04-24 09:33:44,656]DEBUG 11820[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Usuario [OPTIMISTIC_FORCE_INCREMENT]: select usuario0_.email as email1_1_0_, usuario0_.nome as nome2_1_0_, usuario0_.senha as senha3_1_0_ from USUARIO usuario0_ where usuario0_.email=?
+[2020-04-24 09:33:44,764]DEBUG 11928[main] - org.hibernate.loader.entity.CascadeEntityLoader.<init>(CascadeEntityLoader.java:56) - Static select for action ACTION_MERGE on entity entidade.Usuario: select usuario0_.email as email1_1_1_, usuario0_.nome as nome2_1_1_, usuario0_.senha as senha3_1_1_, telefones1_.id_email as id_email5_1_3_, telefones1_.id as id1_0_3_, telefones1_.id as id1_0_0_, telefones1_.ddd as ddd2_0_0_, telefones1_.numero as numero3_0_0_, telefones1_.tipo as tipo4_0_0_, telefones1_.id_email as id_email5_0_0_ from USUARIO usuario0_ left outer join TELEFONE telefones1_ on usuario0_.email=telefones1_.id_email where usuario0_.email=?
+[2020-04-24 09:33:44,767]DEBUG 11931[main] - org.hibernate.loader.entity.CascadeEntityLoader.<init>(CascadeEntityLoader.java:56) - Static select for action ACTION_REFRESH on entity entidade.Usuario: select usuario0_.email as email1_1_1_, usuario0_.nome as nome2_1_1_, usuario0_.senha as senha3_1_1_, telefones1_.id_email as id_email5_1_3_, telefones1_.id as id1_0_3_, telefones1_.id as id1_0_0_, telefones1_.ddd as ddd2_0_0_, telefones1_.numero as numero3_0_0_, telefones1_.tipo as tipo4_0_0_, telefones1_.id_email as id_email5_0_0_ from USUARIO usuario0_ left outer join TELEFONE telefones1_ on usuario0_.email=telefones1_.id_email where usuario0_.email=?
+[2020-04-24 09:33:44,778]DEBUG 11942[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3670) - Static SQL for entity: entidade.Telefone
+[2020-04-24 09:33:44,779]DEBUG 11943[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3675) -  Version select: select id from TELEFONE where id =?
+[2020-04-24 09:33:44,781]DEBUG 11945[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3678) -  Snapshot select: select telefone_.id, telefone_.ddd as ddd2_0_, telefone_.numero as numero3_0_, telefone_.tipo as tipo4_0_, telefone_.id_email as id_email5_0_ from TELEFONE telefone_ where telefone_.id=?
+[2020-04-24 09:33:44,782]DEBUG 11946[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3681) -  Insert 0: insert into TELEFONE (ddd, numero, tipo, id_email, id) values (?, ?, ?, ?, ?)
+[2020-04-24 09:33:44,783]DEBUG 11947[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3682) -  Update 0: update TELEFONE set ddd=?, numero=?, tipo=?, id_email=? where id=?
+[2020-04-24 09:33:44,783]DEBUG 11947[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3683) -  Delete 0: delete from TELEFONE where id=?
+[2020-04-24 09:33:44,788]DEBUG 11952[main] - org.hibernate.persister.entity.AbstractEntityPersister.logStaticSQL(AbstractEntityPersister.java:3686) -  Identity insert: insert into TELEFONE (id, ddd, numero, tipo, id_email) values (default, ?, ?, ?, ?)
+[2020-04-24 09:33:44,790]DEBUG 11954[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5669c5fb]
+[2020-04-24 09:33:44,791]DEBUG 11955[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,793]DEBUG 11957[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,795]DEBUG 11959[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,796]DEBUG 11960[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,806]DEBUG 11970[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ccbeb64]
+[2020-04-24 09:33:44,815]DEBUG 11979[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario.nome
+[2020-04-24 09:33:44,816]DEBUG 11980[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario.senha
+[2020-04-24 09:33:44,818]DEBUG 11982[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario.telefones
+[2020-04-24 09:33:44,823]DEBUG 11987[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:162) - Property path deemed to be circular : usuario.telefones
+[2020-04-24 09:33:44,828]DEBUG 11992[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,831]DEBUG 11995[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,841]DEBUG 12005[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(usuario)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=entidade.Usuario)
+                - SQL table alias mapping - usuario1_
+                - alias suffix - 1_
+                - suffixed key columns - {email1_1_1_}
+
+[2020-04-24 09:33:44,843]DEBUG 12007[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [NONE]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_, usuario1_.email as email1_1_1_, usuario1_.nome as nome2_1_1_, usuario1_.senha as senha3_1_1_ from TELEFONE telefone0_ inner join USUARIO usuario1_ on telefone0_.id_email=usuario1_.email where telefone0_.id=?
+[2020-04-24 09:33:44,845]DEBUG 12009[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3bcbb589]
+[2020-04-24 09:33:44,846]DEBUG 12010[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,847]DEBUG 12011[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,848]DEBUG 12012[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,850]DEBUG 12014[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,857]DEBUG 12021[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3016fd5e]
+[2020-04-24 09:33:44,859]DEBUG 12023[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario.nome
+[2020-04-24 09:33:44,860]DEBUG 12024[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario.senha
+[2020-04-24 09:33:44,861]DEBUG 12025[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario.telefones
+[2020-04-24 09:33:44,862]DEBUG 12026[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:162) - Property path deemed to be circular : usuario.telefones
+[2020-04-24 09:33:44,863]DEBUG 12027[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,865]DEBUG 12029[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,871]DEBUG 12035[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(usuario)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=entidade.Usuario)
+                - SQL table alias mapping - usuario1_
+                - alias suffix - 1_
+                - suffixed key columns - {email1_1_1_}
+
+[2020-04-24 09:33:44,873]DEBUG 12037[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [READ]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_, usuario1_.email as email1_1_1_, usuario1_.nome as nome2_1_1_, usuario1_.senha as senha3_1_1_ from TELEFONE telefone0_ inner join USUARIO usuario1_ on telefone0_.id_email=usuario1_.email where telefone0_.id=?
+[2020-04-24 09:33:44,874]DEBUG 12038[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@53d102a2]
+[2020-04-24 09:33:44,875]DEBUG 12039[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,876]DEBUG 12040[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,877]DEBUG 12041[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,877]DEBUG 12041[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,879]DEBUG 12043[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6b3e12b5]
+[2020-04-24 09:33:44,880]DEBUG 12044[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,881]DEBUG 12045[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,883]DEBUG 12047[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:44,885]DEBUG 12049[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [UPGRADE]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=? for update
+[2020-04-24 09:33:44,886]DEBUG 12050[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5aac4250]
+[2020-04-24 09:33:44,889]DEBUG 12053[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,890]DEBUG 12054[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,890]DEBUG 12054[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,891]DEBUG 12055[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,891]DEBUG 12055[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@42463763]
+[2020-04-24 09:33:44,892]DEBUG 12056[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,893]DEBUG 12057[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,895]DEBUG 12059[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:44,895]DEBUG 12059[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [UPGRADE_NOWAIT]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=? for update
+[2020-04-24 09:33:44,896]DEBUG 12060[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59f63e24]
+[2020-04-24 09:33:44,897]DEBUG 12061[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,897]DEBUG 12061[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,898]DEBUG 12062[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,898]DEBUG 12062[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,899]DEBUG 12063[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ca33c24]
+[2020-04-24 09:33:44,903]DEBUG 12067[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,905]DEBUG 12069[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,907]DEBUG 12071[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:44,908]DEBUG 12072[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [UPGRADE_SKIPLOCKED]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=? for update
+[2020-04-24 09:33:44,909]DEBUG 12073[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@67c2e933]
+[2020-04-24 09:33:44,910]DEBUG 12074[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,911]DEBUG 12075[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,911]DEBUG 12075[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,912]DEBUG 12076[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,913]DEBUG 12077[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@613a8ee1]
+[2020-04-24 09:33:44,913]DEBUG 12077[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,914]DEBUG 12078[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,916]DEBUG 12080[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:44,917]DEBUG 12081[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [FORCE]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=? for update
+[2020-04-24 09:33:44,922]DEBUG 12086[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@178213b]
+[2020-04-24 09:33:44,924]DEBUG 12088[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,931]DEBUG 12095[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,933]DEBUG 12097[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,934]DEBUG 12098[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,938]DEBUG 12102[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1b765a2c]
+[2020-04-24 09:33:44,939]DEBUG 12103[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,941]DEBUG 12105[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,943]DEBUG 12107[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:44,944]DEBUG 12108[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [PESSIMISTIC_READ]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=? for update
+[2020-04-24 09:33:44,946]DEBUG 12110[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e8e8225]
+[2020-04-24 09:33:44,947]DEBUG 12111[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,948]DEBUG 12112[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,949]DEBUG 12113[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,950]DEBUG 12114[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,953]DEBUG 12117[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@18920cc]
+[2020-04-24 09:33:44,955]DEBUG 12119[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,957]DEBUG 12121[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,961]DEBUG 12125[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:44,963]DEBUG 12127[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [PESSIMISTIC_WRITE]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=? for update
+[2020-04-24 09:33:44,965]DEBUG 12129[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2807bdeb]
+[2020-04-24 09:33:44,967]DEBUG 12131[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:44,969]DEBUG 12133[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:44,972]DEBUG 12136[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:44,973]DEBUG 12137[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:44,975]DEBUG 12139[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6492fab5]
+[2020-04-24 09:33:44,980]DEBUG 12144[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:44,990]DEBUG 12154[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:44,998]DEBUG 12162[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:45,000]DEBUG 12164[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [PESSIMISTIC_FORCE_INCREMENT]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=? for update
+[2020-04-24 09:33:45,005]DEBUG 12169[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2c5529ab]
+[2020-04-24 09:33:45,006]DEBUG 12170[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:45,007]DEBUG 12171[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:45,008]DEBUG 12172[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:45,010]DEBUG 12174[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:45,012]DEBUG 12176[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5f6722d3]
+[2020-04-24 09:33:45,013]DEBUG 12177[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:45,016]DEBUG 12180[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:45,020]DEBUG 12184[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:45,022]DEBUG 12186[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [OPTIMISTIC]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=?
+[2020-04-24 09:33:45,024]DEBUG 12188[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2c532cd8]
+[2020-04-24 09:33:45,026]DEBUG 12190[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:45,027]DEBUG 12191[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:45,028]DEBUG 12192[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:45,029]DEBUG 12193[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:45,030]DEBUG 12194[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@51972dc7]
+[2020-04-24 09:33:45,032]DEBUG 12196[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:45,036]DEBUG 12200[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:45,039]DEBUG 12203[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(entity=entidade.Telefone)
+    - Returns
+       - EntityReturnImpl(entity=entidade.Telefone, querySpaceUid=<gen:0>, path=entidade.Telefone)
+          - EntityAttributeFetchImpl(entity=entidade.Usuario, querySpaceUid=<gen:1>, path=entidade.Telefone.usuario)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=entidade.Telefone)
+          - SQL table alias mapping - telefone0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[2020-04-24 09:33:45,040]DEBUG 12204[main] - org.hibernate.loader.entity.plan.EntityLoader.<init>(EntityLoader.java:146) - Static select for entity entidade.Telefone [OPTIMISTIC_FORCE_INCREMENT]: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=?
+[2020-04-24 09:33:45,042]DEBUG 12206[main] - org.hibernate.loader.entity.CascadeEntityLoader.<init>(CascadeEntityLoader.java:56) - Static select for action ACTION_MERGE on entity entidade.Telefone: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=?
+[2020-04-24 09:33:45,044]DEBUG 12208[main] - org.hibernate.loader.entity.CascadeEntityLoader.<init>(CascadeEntityLoader.java:56) - Static select for action ACTION_REFRESH on entity entidade.Telefone: select telefone0_.id as id1_0_0_, telefone0_.ddd as ddd2_0_0_, telefone0_.numero as numero3_0_0_, telefone0_.tipo as tipo4_0_0_, telefone0_.id_email as id_email5_0_0_ from TELEFONE telefone0_ where telefone0_.id=?
+[2020-04-24 09:33:45,107]DEBUG 12271[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3e821657]
+[2020-04-24 09:33:45,110]DEBUG 12274[main] - org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl.registerQuerySpace(QuerySpacesImpl.java:177) - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1d131e1b]
+[2020-04-24 09:33:45,125]DEBUG 12289[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : ddd
+[2020-04-24 09:33:45,125]DEBUG 12289[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : numero
+[2020-04-24 09:33:45,126]DEBUG 12290[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : tipo
+[2020-04-24 09:33:45,126]DEBUG 12290[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:154) - Visiting attribute path : usuario
+[2020-04-24 09:33:45,127]DEBUG 12291[main] - org.hibernate.persister.walking.spi.MetamodelGraphWalker.visitAttributeDefinition(MetamodelGraphWalker.java:162) - Property path deemed to be circular : usuario
+[2020-04-24 09:33:45,128]DEBUG 12292[main] - org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy.buildLoadPlan(FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:86) - Building LoadPlan...
+[2020-04-24 09:33:45,143]DEBUG 12307[main] - org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor.processQuerySpaceJoins(LoadQueryJoinAndFetchProcessor.java:111) - processing queryspace <gen:0>
+[2020-04-24 09:33:45,146]DEBUG 12310[main] - org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter.logTree(LoadPlanTreePrinter.java:86) - LoadPlan(collection=entidade.Usuario.telefones)
+    - Returns
+       - CollectionReturnImpl(collection=entidade.Usuario.telefones, querySpaceUid=<gen:0>, path=[entidade.Usuario.telefones])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=entidade.Telefone, querySpaceUid=<gen:1>, path=[entidade.Usuario.telefones].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=entidade.Usuario.telefones)
+          - SQL table alias mapping - telefones0_
+          - alias suffix - 0_
+          - suffixed key columns - {id_email5_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=entidade.Telefone)
+                - SQL table alias mapping - telefones0_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+[2020-04-24 09:33:45,148]DEBUG 12312[main] - org.hibernate.loader.collection.plan.CollectionLoader.<init>(CollectionLoader.java:114) - Static select for collection entidade.Usuario.telefones: select telefones0_.id_email as id_email5_1_0_, telefones0_.id as id1_0_0_, telefones0_.id as id1_0_1_, telefones0_.ddd as ddd2_0_1_, telefones0_.numero as numero3_0_1_, telefones0_.tipo as tipo4_0_1_, telefones0_.id_email as id_email5_0_1_ from TELEFONE telefones0_ where telefones0_.id_email=?
+[2020-04-24 09:33:46,629]DEBUG 13793[main] - org.hibernate.internal.SessionFactoryRegistry.<init>(SessionFactoryRegistry.java:67) - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@77a7cf58
+[2020-04-24 09:33:46,643]DEBUG 13807[main] - org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:89) - Registering SessionFactory: 2e827a15-784c-42a7-9ced-fbed3abf9762 (<unnamed>)
+[2020-04-24 09:33:46,645]DEBUG 13809[main] - org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:96) - Not binding SessionFactory to JNDI, no JNDI name configured
+[2020-04-24 09:33:46,645]DEBUG 13809[main] - org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:503) - Instantiated session factory
+[2020-04-24 09:33:46,650]DEBUG 13814[main] - org.hibernate.internal.NamedQueryRepository.checkNamedQueries(NamedQueryRepository.java:155) - Checking 0 named HQL queries
+[2020-04-24 09:33:46,651]DEBUG 13815[main] - org.hibernate.internal.NamedQueryRepository.checkNamedQueries(NamedQueryRepository.java:171) - Checking 0 named SQL queries
+[2020-04-24 09:33:46,706]DEBUG 13870[main] - org.hibernate.stat.internal.StatisticsInitiator.initiateServiceInternal(StatisticsInitiator.java:110) - Statistics initialized [enabled=false]
+[2020-04-24 09:33:46,747]DEBUG 13911[main] - org.hibernate.jpa.internal.schemagen.JpaSchemaGenerator$Generation.execute(JpaSchemaGenerator.java:115) - No actions specified; doing nothing
+[2020-04-24 09:33:47,138]DEBUG 14302[main] - org.hibernate.jpa.internal.EntityManagerFactoryRegistry.<init>(EntityManagerFactoryRegistry.java:56) - Initializing EntityManagerFactoryRegistry : org.hibernate.jpa.internal.EntityManagerFactoryRegistry@45e37a7e
+[2020-04-24 09:33:47,139]DEBUG 14303[main] - org.hibernate.jpa.internal.EntityManagerFactoryRegistry.addEntityManagerFactory(EntityManagerFactoryRegistry.java:66) - Registering EntityManagerFactory: sefaz 
+[2020-04-24 09:33:47,596]DEBUG 14760[main] - org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:294) - parse() - HQL: from entidade.Usuario u
+[2020-04-24 09:33:47,632]DEBUG 14796[main] - org.hibernate.hql.internal.ast.QueryTranslatorImpl.showHqlAst(QueryTranslatorImpl.java:312) - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'from'
+          \-[RANGE] Node: 'RANGE'
+             +-[DOT] Node: '.'
+             |  +-[IDENT] Node: 'entidade'
+             |  \-[IDENT] Node: 'Usuario'
+             \-[ALIAS] Node: 'u'
+

@@ -1,12 +1,12 @@
 package testeUsuario;
 
 import dao.UsuarioDAOImpl;
-
-import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.EntityManager;
-
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import org.hibernate.jpa.internal.EntityManagerImpl;
 import entidade.Telefone;
 import entidade.Usuario;
 import util.EntityManagerUtil;
@@ -16,38 +16,35 @@ public class TesteUsuario {
 	public static void main(String[] args) {
 
 		// salvarTest();
-		pesquisarTest();
 		// removerTest();
 		// alterarTest();
+		pesquisarTest();
+
 	}
 
 	static Usuario user = new Usuario();
 	static Telefone tel = new Telefone();
 	static List<Usuario> listaUsuario;
-	static String emailSelecionado;
+	// static String emailSelecionado;
 
 	static UsuarioDAOImpl usuarioDAO = new UsuarioDAOImpl(EntityManagerUtil.getEntityManager());
 
 	public static void salvarTest() {
 
-		listaUsuario = usuarioDAO.listarTodos();
-		listaUsuario = new ArrayList<Usuario>();
-		user.setTelefones(new ArrayList<Telefone>());
-		// user = usuarioDAO.pesquisar(emailSelecionado);
-
 		tel.setDdd(21);
-		tel.setNumero("533443");
+		tel.setNumero("55455533");
 		tel.setTipo("CELULAR");
 		tel.setUsuario(user);
 		user.getTelefones().add(tel);
 
-		user.setNome("micolau");
-		user.setSenha("1234567");
-		user.setEmail("ruriknj@com");
+		user.setNome("teste3434");
+		user.setSenha("teste3434");
+		user.setEmail("teste3434@com.br");
 
-		usuarioDAO.inserir(user);
+		// usuarioDAO.inserir(user);
+		usuarioDAO.alterar(user);
 
-		System.out.println("Lista de usuários: " + listaUsuario);
+		System.out.println("Lista de usuários completa: " + listaUsuario);
 	}
 
 	public static void pesquisarTest() {
@@ -60,7 +57,7 @@ public class TesteUsuario {
 
 	public static void removerTest() {
 
-		user = usuarioDAO.pesquisar("nick@com");
+		user = usuarioDAO.pesquisar("teste10@com");
 		usuarioDAO.remover(user);
 
 		listaUsuario = usuarioDAO.listarTodos();
@@ -71,23 +68,38 @@ public class TesteUsuario {
 
 	public static void alterarTest() {
 
-		listaUsuario = usuarioDAO.listarTodos();
-		listaUsuario = new ArrayList<Usuario>();
-		user.setTelefones(new ArrayList<Telefone>());
-
 		tel.setDdd(11);
-		tel.setNumero("123456789");
+		tel.setNumero("343434");
 		tel.setTipo("Celular");
 		tel.setUsuario(user);
 		user.getTelefones().add(tel);
 
-		user.setNome("rurik123");
-		user.setSenha("12345678787");
-		user.setEmail("rurikn123j@com");
+		user.setNome("rurik3434");
+		user.setSenha("3434");
+		user.setEmail("rurikn3434j@com");
 
 		usuarioDAO.alterar(user);
 
-		System.out.println(listaUsuario);
+		System.out.println("LISTA COMPLETA: " + listaUsuario);
+	}
+
+	public static void primeirasConsultas(EntityManagerImpl entityManager) {
+
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("sefaz");
+		EntityManager entityManager1 = entityManagerFactory.createEntityManager();
+
+		String jpql = "select u from Usuario u";
+		TypedQuery<Usuario> typedQuery = entityManager1.createQuery(jpql, Usuario.class);
+		List<Usuario> lista = typedQuery.getResultList();
+		lista.forEach(u -> System.out.println(u.getNome()));
+
+		System.out.println(lista.size());
+
+		for (Usuario user : lista) {
+
+			System.out.println("Lista de usuarios e e-mails: " + user.getNome());
+		}
+
 	}
 
 }

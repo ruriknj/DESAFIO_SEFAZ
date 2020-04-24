@@ -56,10 +56,9 @@ public class Usuario {
 	public void setTelefones(List<Telefone> telefones) {
 		this.telefones = telefones;
 	}
-	
-	
-	public Usuario( ) {
-		
+
+	public Usuario() {
+
 	}
 
 	public Usuario(String email, String nome, String senha, List<Telefone> telefones) {

@@ -1,11 +1,8 @@
 package controle;
 
-import java.io.IOException;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
-import dao.UsuarioDAO;
 import dao.UsuarioDAOImpl;
 import entidade.Usuario;
 import util.EntityManagerUtil;
@@ -14,73 +11,46 @@ import util.EntityManagerUtil;
 @RequestScoped
 public class LoginBean {
 
+	Usuario usuario = new Usuario();
+
 	private String usarioAdmin = "admin";
 	private String senhaAdmin = "admin";
-
-	private String usuarioAdm;
-	private String senhaAdm;
-
-	private String usuarioNovo;
-	private String senhaNovo;
-
+	private String usuarioAdm = "";
+	private String senhaAdm = "";
+	private UsuarioDAOImpl usuarioDAO = new UsuarioDAOImpl(EntityManagerUtil.getEntityManager());
 	private static final String PESQUISAR = "pesquisarUsuario.xhtml";
-	private UsuarioDAO usuarioDAO;
+	// private UsuarioDAO usuarioDAO;
+
 	private String mensagem;
 
-	
 	public LoginBean() {
-		
-		this.usuarioDAO = new UsuarioDAOImpl(EntityManagerUtil.getEntityManager());
+
 	}
 
-	public void entrar() throws IOException {
+	@SuppressWarnings("unused")
+	public void entrar() {
 
-		if (this.usuarioAdm.equals(this.usarioAdmin) && this.senhaAdm.equals(this.senhaAdmin))
+		this.usuario.setNome(usuarioAdm);
+		this.usuario.setSenha(senhaAdm);
 
-		{
-			FacesContext.getCurrentInstance().getExternalContext().redirect(PESQUISAR);
+		try {
 
-		} else {
+			if (this.usuarioAdm.equals(this.usarioAdmin) && this.senhaAdm.equals(this.senhaAdmin))
 
-			Usuario usuarioPesquisa = this.usuarioDAO.pesquisar(this.usuarioAdm);
+				FacesContext.getCurrentInstance().getExternalContext().redirect(PESQUISAR);
+			else {
 
-			if (usuarioPesquisa != null) {
-				
-				if (usuarioPesquisa.getSenha().equals(this.senhaAdm)) {
-					FacesContext.getCurrentInstance().getExternalContext().redirect(PESQUISAR);
-					
-				} else {
-					this.mensagem = "Usuario, senha errada";
-				}
-			} else {
-				this.mensagem = "Usuario, não existe";
+				this.mensagem = "logado com sucesso";
+
+				Usuario usuarioPesquisa = this.usuarioDAO.getName(this.usuario);
+
+				FacesContext.getCurrentInstance().getExternalContext().redirect(PESQUISAR);
 			}
 
+		} catch (Exception e) {
+			this.mensagem = "Usuario ou senha errada";
+
 		}
-	}
-
-	public String getUsuarioNovo() {
-		return usuarioNovo;
-	}
-
-	public void setUsuarioNovo(String usuarioNovo) {
-		this.usuarioNovo = usuarioNovo;
-	}
-
-	public String getSenhaNovo() {
-		return senhaNovo;
-	}
-
-	public void setSenhaNovo(String senhaNovo) {
-		this.senhaNovo = senhaNovo;
-	}
-
-	public UsuarioDAO getUsuarioDAO() {
-		return usuarioDAO;
-	}
-
-	public void setUsuarioDAO(UsuarioDAO usuarioDAO) {
-		this.usuarioDAO = usuarioDAO;
 	}
 
 	public String getUsuarioAdm() {
@@ -106,6 +76,13 @@ public class LoginBean {
 	public void setMensagem(String mensagem) {
 		this.mensagem = mensagem;
 	}
-	
-	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 }

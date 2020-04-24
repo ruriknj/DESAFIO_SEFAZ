@@ -4,17 +4,10 @@ import java.util.List;
 
 import entidade.Usuario;
 
-/**
- * 
- * @author Cleiton
- *
- *  UsuarioDAO é uma interface, onde compartilha a chamada dos metodos, mas não os implementam.
- */
-
 public interface UsuarioDAO {
-	
+
 	public boolean inserir(Usuario usuario);
-	
+
 	public void alterar(Usuario usuario);
 
 	public void remover(Usuario usuario);
@@ -22,5 +15,7 @@ public interface UsuarioDAO {
 	public Usuario pesquisar(String email);
 
 	public List<Usuario> listarTodos();
+
+	public Usuario getName(Usuario usuario);
 
 }

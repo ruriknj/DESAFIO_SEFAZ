@@ -1,37 +1,42 @@
 package dao;
 
-import java.util.List
-;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 import entidade.Usuario;
-
+import util.EntityManagerUtil;
 
 public class UsuarioDAOImpl implements UsuarioDAO {
 
 	private EntityManager ent;
 
-	// Construtor vai receber a conexão para executar
 	public UsuarioDAOImpl(EntityManager ent) {
 		this.ent = ent;
 	}
 
 	public boolean inserir(Usuario usuario) {
 
-		EntityTransaction tx = ent.getTransaction();
-		tx.begin();
+		try {
 
-		ent.persist(usuario);
-		tx.commit();
+			EntityTransaction tx = ent.getTransaction();
+			tx.begin();
 
+			ent.persist(usuario);
+			tx.commit();
+
+			System.out.println("Usuario salvo com sucesso!");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
 		return true;
 
 	}
 
-	
 	public void alterar(Usuario usuario) {
 
 		EntityTransaction tx = ent.getTransaction();
@@ -67,6 +72,24 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 		List<Usuario> usuarios = query.getResultList();
 
 		return usuarios;
+	}
+
+	public Usuario getName(Usuario usuario) {
+
+		System.out.println("lista user inputs 4: " + usuario);
+
+		EntityManager em = EntityManagerUtil.getEntityManager();
+
+		String hql = "SELECT u from Usuario u WHERE u.nome = :usuarioAdm AND u.senha = :senhaAdm";
+
+		Query query = em.createQuery(hql);
+
+		query.setParameter("usuarioAdm", usuario.getNome());
+		query.setParameter("senhaAdm", usuario.getSenha());
+
+		System.out.println("Lista de users:" + query.getSingleResult());
+
+		return (Usuario) query.getSingleResult();
 
 	}
 

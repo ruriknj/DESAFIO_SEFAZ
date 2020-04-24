@@ -1,16 +1,8 @@
 package util;
 
-import java.sql.DriverManager;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
-/*
-* @author Rurik
-* Verifica a conexão com o banco de dados HSQLDB.
-*
-*/
 
 public class EntityManagerUtil {
 

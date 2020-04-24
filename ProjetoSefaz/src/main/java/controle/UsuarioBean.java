@@ -3,13 +3,10 @@ package controle;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
-
 import dao.UsuarioDAO;
 import dao.UsuarioDAOImpl;
 import entidade.Telefone;
@@ -30,6 +27,8 @@ public class UsuarioBean {
 	private static final String MANTER = "manterUsuario.xhtml";
 	private static final String PESQUISAR = "pesquisarUsuario.xhtml";
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 	public UsuarioBean() {
 
 		this.usuario = new Usuario();
@@ -39,18 +38,18 @@ public class UsuarioBean {
 		this.listaUsuario = new ArrayList<Usuario>();
 
 		this.usuarioDAO = new UsuarioDAOImpl(EntityManagerUtil.getEntityManager());
-
 		this.listaUsuario = this.usuarioDAO.listarTodos();
 
-		System.out.println(this.listaUsuario);
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void pesquisar() {
 
 		this.listaUsuario = this.usuarioDAO.listarTodos();
 		System.out.println("Entrou PEsquisar ====");
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void salvar() throws IOException {
 
 		if (this.usuarioDAO.inserir(this.usuario)) {
@@ -66,6 +65,7 @@ public class UsuarioBean {
 
 	}
 
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void adicionarTelefone() {
 
 		if (!this.existeTelefone(telefone)) {
@@ -88,6 +88,7 @@ public class UsuarioBean {
 
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	private boolean existeTelefone(Telefone telefone) {
 		boolean retorno = false;
 
@@ -100,20 +101,24 @@ public class UsuarioBean {
 		return retorno;
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void abrirManterUsuario() throws IOException {
 		FacesContext.getCurrentInstance().getExternalContext().redirect(MANTER);
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void abrirPerquisarUsuario() throws IOException {
 		FacesContext.getCurrentInstance().getExternalContext().redirect(PESQUISAR);
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void editar() throws IOException {
 		Usuario usuarioEdicao = this.usuarioDAO.pesquisar(emailSelecionado);
 		this.usuario = usuarioEdicao;
 		abrirManterUsuario();
 	}
 
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public String remover() {
 		Usuario usuarioRemocao = this.usuarioDAO.pesquisar(emailSelecionado);
 		this.usuarioDAO.remover(usuarioRemocao);
@@ -121,6 +126,7 @@ public class UsuarioBean {
 		return "";
 	}
 
+	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void limpar() {
 		this.listaUsuario = new ArrayList<Usuario>();
 		this.usuario = new Usuario();
@@ -128,6 +134,7 @@ public class UsuarioBean {
 		this.telefone = new Telefone();
 	}
 
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public Usuario getUsuario() {
 		return usuario;
 	}
