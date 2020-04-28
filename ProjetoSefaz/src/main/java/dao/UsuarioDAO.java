@@ -2,6 +2,7 @@ package dao;
 
 import java.util.List;
 
+import entidade.Telefone;
 import entidade.Usuario;
 
 public interface UsuarioDAO {

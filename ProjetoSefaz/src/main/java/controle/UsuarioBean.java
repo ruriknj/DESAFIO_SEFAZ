@@ -7,6 +7,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import org.primefaces.event.RowEditEvent;
 import dao.UsuarioDAO;
 import dao.UsuarioDAOImpl;
 import entidade.Telefone;
@@ -21,14 +22,12 @@ public class UsuarioBean {
 	private Telefone telefone;
 	private List<Usuario> listaUsuario;
 	private String emailSelecionado;
-
 	private UsuarioDAO usuarioDAO;
-
+	private boolean editable;
 	private static final String MANTER = "manterUsuario.xhtml";
 	private static final String PESQUISAR = "pesquisarUsuario.xhtml";
 
-	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public UsuarioBean() {
 
 		this.usuario = new Usuario();
@@ -52,7 +51,14 @@ public class UsuarioBean {
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public void salvar() throws IOException {
 
+		System.out.println("Usuarios salvos: " + this.usuario);
+		System.out.println("Status da tabela: " + editable);
+		
+
 		if (this.usuarioDAO.inserir(this.usuario)) {
+			
+			telefone.setEditable(false);
+
 			FacesContext.getCurrentInstance().addMessage(null,
 					new FacesMessage(FacesMessage.SEVERITY_INFO, "", "Sucesso !!!"));
 
@@ -134,7 +140,29 @@ public class UsuarioBean {
 		this.telefone = new Telefone();
 	}
 
-	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	public void onRowCancel(RowEditEvent event) {
+		FacesMessage msg = new FacesMessage("Edit Cancelled");
+		FacesContext.getCurrentInstance().addMessage(null, msg);
+	}
+
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	public boolean isEditable() {
+		return editable;
+	}
+
+	public void setEditable(boolean editable) {
+		this.editable = editable;
+	}
+
+	public String editAction(Telefone telefone) {
+
+		telefone.setEditable(true);
+		return null;
+	}
+
+	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public Usuario getUsuario() {
 		return usuario;
 	}
@@ -166,4 +194,5 @@ public class UsuarioBean {
 	public void setEmailSelecionado(String emailSelecionado) {
 		this.emailSelecionado = emailSelecionado;
 	}
+
 }

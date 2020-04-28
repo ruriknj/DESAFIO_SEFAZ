@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "TELEFONE")
@@ -25,6 +26,9 @@ public class Telefone {
 
 	@Column(name = "tipo")
 	private String tipo;
+
+	@Column(name = "editable")
+	private boolean editable;
 
 	// @Column
 	// private String id_email;
@@ -71,6 +75,14 @@ public class Telefone {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public boolean isEditable() {
+		return editable;
+	}
+
+	public void setEditable(boolean editable) {
+		this.editable = editable;
 	}
 
 	@Override

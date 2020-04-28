@@ -61,13 +61,6 @@ public class Usuario {
 
 	}
 
-	public Usuario(String email, String nome, String senha, List<Telefone> telefones) {
-		this.email = email;
-		this.nome = nome;
-		this.senha = senha;
-		this.telefones = telefones;
-	}
-
 	@Override
 	public String toString() {
 		return "\n" + "Usuario:" + "\n " + "Nome: " + nome + ", Email: " + email + ", Senha: " + senha + "\n"

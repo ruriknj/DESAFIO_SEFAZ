@@ -1,10 +1,14 @@
 package testeUsuario;
 
+import dao.UsuarioDAO;
+
+
 import dao.UsuarioDAOImpl;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import org.hibernate.jpa.internal.EntityManagerImpl;
 import entidade.Telefone;
@@ -19,15 +23,19 @@ public class TesteUsuario {
 		// removerTest();
 		// alterarTest();
 		pesquisarTest();
+		// pesquisarIdTest36);
+		//listarTelefonesTest();
 
 	}
 
 	static Usuario user = new Usuario();
 	static Telefone tel = new Telefone();
 	static List<Usuario> listaUsuario;
+	static List<Telefone> telefones;
 	// static String emailSelecionado;
 
 	static UsuarioDAOImpl usuarioDAO = new UsuarioDAOImpl(EntityManagerUtil.getEntityManager());
+	static UsuarioDAO dao = new UsuarioDAOImpl(EntityManagerUtil.getEntityManager());
 
 	public static void salvarTest() {
 
@@ -99,6 +107,16 @@ public class TesteUsuario {
 
 			System.out.println("Lista de usuarios e e-mails: " + user.getNome());
 		}
+	}
+
+	public static void listarTelefonesTest() {
+
+		Query query = EntityManagerUtil.getEntityManager().createQuery("from Telefone t");
+
+		@SuppressWarnings("unchecked")
+		List<Telefone> telefones = query.getResultList();
+
+		System.out.println(telefones);
 
 	}
 
