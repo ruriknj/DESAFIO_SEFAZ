@@ -1,11 +1,12 @@
 package dao;
-import java.util.List;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import entidade.Usuario;
 import util.EntityManagerUtil;
+
 
 public class UsuarioDAOImpl implements UsuarioDAO {
 
@@ -30,6 +31,10 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 
+			ent.getTransaction().rollback();
+			ent.close();
+			ent.getEntityManagerFactory();
+
 		}
 		return true;
 
@@ -37,20 +42,39 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 	public void alterar(Usuario usuario) {
 
-		EntityTransaction tx = ent.getTransaction();
-		tx.begin();
+		try {
 
-		ent.merge(usuario);
-		tx.commit();
+			EntityTransaction tx = ent.getTransaction();
+			tx.begin();
+
+			ent.merge(usuario);
+			tx.commit();
+
+		} catch (Exception e) {
+			ent.getTransaction().rollback();
+			ent.close();
+			ent.getEntityManagerFactory();
+		}
 
 	}
 
 	public void remover(Usuario usuario) {
-		EntityTransaction tx = ent.getTransaction();
-		tx.begin();
 
-		ent.remove(usuario);
-		tx.commit();
+		try {
+
+			EntityTransaction tx = ent.getTransaction();
+			tx.begin();
+
+			ent.remove(usuario);
+			tx.commit();
+
+		} catch (Exception e) {
+
+			ent.getTransaction().rollback();
+			ent.close();
+			ent.getEntityManagerFactory();
+
+		}
 
 	}
 
