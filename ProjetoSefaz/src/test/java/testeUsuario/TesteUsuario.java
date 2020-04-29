@@ -57,7 +57,7 @@ public class TesteUsuario {
 
 	public static void pesquisarTest() {
 
-		listaUsuario = usuarioDAO.listarTodos();
+		listaUsuario = usuarioDAO.listarUsuarios();
 		System.out.println("Entrou PEsquisar ====");
 		System.out.println(listaUsuario);
 
@@ -68,7 +68,7 @@ public class TesteUsuario {
 		user = usuarioDAO.pesquisar("teste10@com");
 		usuarioDAO.remover(user);
 
-		listaUsuario = usuarioDAO.listarTodos();
+		listaUsuario = usuarioDAO.listarUsuarios();
 		System.out.println("Lista de usuários: " + listaUsuario);
 		System.out.println(listaUsuario);
 

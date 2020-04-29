@@ -1,8 +1,6 @@
 package dao;
 
 import java.util.List;
-
-import entidade.Telefone;
 import entidade.Usuario;
 
 public interface UsuarioDAO {
@@ -15,8 +13,10 @@ public interface UsuarioDAO {
 
 	public Usuario pesquisar(String email);
 
-	public List<Usuario> listarTodos();
+	public List<Usuario> listarUsuarios();
 
 	public Usuario getName(Usuario usuario);
+	
+	
 
 }

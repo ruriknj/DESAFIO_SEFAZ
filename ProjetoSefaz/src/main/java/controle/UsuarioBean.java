@@ -14,8 +14,8 @@ import entidade.Telefone;
 import entidade.Usuario;
 import util.EntityManagerUtil;
 
-@ManagedBean(name = "UsuarioBean")
 @SessionScoped
+@ManagedBean(name = "UsuarioBean")
 public class UsuarioBean {
 
 	private Usuario usuario;
@@ -37,15 +37,16 @@ public class UsuarioBean {
 		this.listaUsuario = new ArrayList<Usuario>();
 
 		this.usuarioDAO = new UsuarioDAOImpl(EntityManagerUtil.getEntityManager());
-		this.listaUsuario = this.usuarioDAO.listarTodos();
+		this.listaUsuario = this.usuarioDAO.listarUsuarios();
 
 	}
 
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	public void pesquisar() {
+	public void lista() {
 
-		this.listaUsuario = this.usuarioDAO.listarTodos();
-		System.out.println("Entrou PEsquisar ====");
+		this.listaUsuario = this.usuarioDAO.listarUsuarios();
+		System.out.println("Entrou Listagem geral: ====");
+
 	}
 
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -53,11 +54,10 @@ public class UsuarioBean {
 
 		System.out.println("Usuarios salvos: " + this.usuario);
 		System.out.println("Status da tabela: " + editable);
-		
 
 		if (this.usuarioDAO.inserir(this.usuario)) {
-			
-			telefone.setEditable(false);
+
+	
 
 			FacesContext.getCurrentInstance().addMessage(null,
 					new FacesMessage(FacesMessage.SEVERITY_INFO, "", "Sucesso !!!"));
@@ -124,11 +124,19 @@ public class UsuarioBean {
 		abrirManterUsuario();
 	}
 
+	public void alterar() throws IOException {
+		Usuario usuarioModificado = this.usuarioDAO.pesquisar(emailSelecionado);
+		this.usuario = usuarioModificado;
+		usuarioDAO.alterar(usuarioModificado);
+		
+		abrirPerquisarUsuario();
+	}
+
 	// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	public String remover() {
 		Usuario usuarioRemocao = this.usuarioDAO.pesquisar(emailSelecionado);
 		this.usuarioDAO.remover(usuarioRemocao);
-		this.listaUsuario = this.usuarioDAO.listarTodos();
+		this.listaUsuario = this.usuarioDAO.listarUsuarios();
 		return "";
 	}
 

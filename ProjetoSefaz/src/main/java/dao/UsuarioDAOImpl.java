@@ -1,12 +1,9 @@
 package dao;
-
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityNotFoundException;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-import entidade.Telefone;
 import entidade.Usuario;
 import util.EntityManagerUtil;
 
@@ -65,7 +62,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 	}
 
-	public List<Usuario> listarTodos() {
+	public List<Usuario> listarUsuarios() {
 
 		Query query = ent.createQuery("from Usuario u");
 

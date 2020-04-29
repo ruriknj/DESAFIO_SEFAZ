@@ -90,6 +90,10 @@
 						actionListener="#{UsuarioBean.salvar}" />
 				</p:column>
 				<p:column>
+					<p:commandButton value="Atualizar" update="@form"
+						actionListener="#{UsuarioBean.alterar}" />
+				</p:column>
+				<p:column>
 					<p:commandButton value="Limpar" update="crud" process="@this"
 						style="margin-right:20px;" actionListener="#{UsuarioBean.limpar}" />
 				</p:column>
